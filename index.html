@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="heading">Maps and sets handson</h1>
+    <div class="maincontainer">
+    
+    <div class="container">
+    <div class="question">
+        Q1.	Problem:
+        You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+        Your task is to remove all the duplicate occurrences of characters in the string.
+
+        Input:
+        abcadeecfb
+        
+        Output:
+        abcdef 
+    </div>
+    <pre class="answer"> <br>
+    var a="abcadeecfb"
+    let b=[...b]
+    let c=b.join('')
+    console.log(c)
+    </pre>
+    <br>
+    <p class="answer">OUTPUT :- abcdef</p>
+    </div>
+    
+    <div class="container">
+        <div class="question">
+            Q2.	Problem:
+            You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)
+            
+            Input:
+            abcadeecfb <br>
+            
+            Output:
+            a=2 <br>
+            b=2 <br>
+            c=2 <br>
+            d=1 <br>
+            e=2 <br>
+            f=1  <br>
+        </div>
+        <pre class="answer">
+            function countAplhabtes(str){
+                const aphabletCount = new Map()
+                
+                for(let char of str){
+                    if(aphabletCount.has(char)){
+                        aphabletCount.set(char, aphabletCount.get(char)+1)
+                    }
+                    else{
+                        aphabletCount.set(char, 1)
+                    }
+                }
+                for(let [char,count] of aphabletCount){
+                console.log(`${char} = ${count}}`)
+            } 
+            }
+        </pre>
+        <br>
+         <br> <p class="answer">OUTPUT :-   a=2 <br>
+            b=2 <br>
+            c=2 <br>
+            d=1 <br>
+            e=2 <br>
+            f=1 <br></p>
+        </div>
+    </div>
+</body>
+</html>
